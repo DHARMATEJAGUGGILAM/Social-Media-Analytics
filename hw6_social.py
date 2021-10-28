@@ -35,7 +35,10 @@ Parameters: str
 Returns: str
 '''
 def parseName(fromString):
-    return
+    index1 = fromString.find(":")
+    index2 = fromString.find("(")
+    index3 = fromString[index1+2:index2-1]       
+    return index3
 
 
 '''
@@ -45,7 +48,10 @@ Parameters: str
 Returns: str
 '''
 def parsePosition(fromString):
-    return
+    index4 = fromString.find("(")
+    index5 = fromString.find("fr")
+    index6 = fromString[index4+1:index5-1]   
+    return index6
 
 
 '''
@@ -55,8 +61,10 @@ Parameters: str
 Returns: str
 '''
 def parseState(fromString):
-    return
-
+    index2 = fromString.find("from")
+    index4 = fromString.find(")")
+    index5 = fromString[index2+5:index4]   
+    return index5
 
 '''
 findHashtags(message)
@@ -65,8 +73,17 @@ Parameters: str
 Returns: list of strs
 '''
 def findHashtags(message):
-    return
-
+    hashtag_list =[]
+    msg=message.split("#")
+    for word in msg[1:]:
+        r = ""
+        for charecter in word:
+            if charecter in endChars:
+                break
+            r+= charecter
+        r="#"+r
+        hashtag_list.append(r)
+    return hashtag_list
 
 '''
 getRegionFromState(stateDf, state)
@@ -276,4 +293,4 @@ if __name__ == "__main__":
     ## Uncomment these for Week 3 ##
     """print("\n" + "#"*15 + " WEEK 3 OUTPUT " + "#" * 15 + "\n")
     test.runWeek3()"""
-    test.testMakeDataFrame()
+    test.testFindHashtags()
