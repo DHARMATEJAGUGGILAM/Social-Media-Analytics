@@ -1,0 +1,61 @@
+Semester,original 1,original 2,original 3,cleaned 1,cleaned 2,cleaned 3,category 1,category 2,category 3
+S21,Vennila,Choclate,orange,vanilla,chocolate,orange,vanilla,chocolate,fruit
+S21,butterscotch,oreo,custard apple,butterscotch,oreo,custardapple,other,cookie,fruit
+S21,Chocolate,Mango,Vanilla,chocolate,mango,vanilla,chocolate,fruit,vanilla
+S21,chocolate,mango,coffee,chocolate,mango,coffee,chocolate,fruit,coffee/tea
+S21,Butterscotch,Vanilla,Blackcurrant,butterscotch,vanilla,blackcurrant,other,vanilla,fruit
+S21,vanilla,chocolate,straw berry,vanilla,chocolate,strawberry,vanilla,chocolate,fruit
+S21,venilla,butterscotch,strawberry,venilla,butterscotch,strawberry,venilla,other,fruit
+S21,Butter scotch,venilla,chocolate,butterscotch,venilla,chocolate,other,venilla,chocolate
+S21,Butter scotch,vanilla,chocolate,butterscotch,vanilla,chocolate,other,vanilla,chocolate
+S21,Butter Scotch,vanilla,chocolate,butterscotch,vanilla,chocolate,other,vanilla,chocolate
+S21,Butter scotch,chocolate,orange,butterscotch,chocolate,orange,other,chocolate,fruit
+S21,Butter scotch,mango,orange,butterscotch,mango,orange,other,fruit,fruit
+S21,mango,vanilla,chocolate,mango,vanilla,chocolate,fruit,vanilla,chocolate
+S21,chocolate chip,mango,orange,chocolate chip,mango,orange,chocolate,fruit,fruit
+S21,mango,vanilla,orange,mango,vanilla,orange,fruit,vanilla,fruit
+,mango,vanilla,orange,mango,vanilla,orange,fruit,vanilla,fruit
+,vanilla,choco,orange,vanilla,choco,orange,vanilla,chocolate,fruit
+,vanilla,choco,orange,vanilla,choco,orange,vanilla,chocolate,fruit
+,choco,mint choco,Oreo,choco,mint choco,oreo,chocolate,chocolate,cookie
+,mint choco,mango,vanilla,mint choco,mango,vanilla,chocolate,fruit,vanilla
+,mango,cream,orange,mango,cream,orange,fruit,other,fruit
+,vanilla,choco,mango,vanilla,choco,mango,vanilla,chocolate,fruit
+,mango,mint choco,Oreo,mango,mint choco,oreo,fruit,chocolate,cookie
+,cream,choco,vanilla,cream,choco,vanilla,other,chocolate,vanilla
+,vanilla,cream,orange,vanilla,cream,orange,vanilla,other,fruit
+,vanilla,Mango,orange,vanilla,mango,orange,vanilla,fruit,fruit
+,Vanilla,mango,coffee,vanilla,mango,coffee,vanilla,fruit,coffee/tea
+,Butter scotch,Chico chips,orange,butterscotch,choco chips,orange,other,chocolates,fruit
+,Mango,choco,orange,mango,choco,orange,fruit,chocolate,fruit
+,Mango,Choco,orange,mango,choco,orange,fruit,chocolate,fruit
+,Mango,vanilla,butter scotch,mango,vanilla,butterscotch,fruit,vanilla,other
+,Butter scotch,choco,cream,butterscotch,choco,cream,other,chocolate,other
+,Mango,mint chocolate,coffee,mango,mint chocolate,coffee,fruit,chocolate,coffee/tea
+,Choco chips,mint choco,orange,choco chips,mint choco,orange,chocolate,chocolate,fruit
+,Chocolate,Cream,orange,chocolate,cream,orange,chocolate,other,fruit
+,Mango,vanilla,coffee,mango,vanilla,coffee,fruit,vanilla,coffee/tea
+,Choco,nuts,orange,choco ,nuts,orange,chocolate,other,fruit
+,Mango,vanilla,orange,mango,vanilla,orange,fruit,vanilla,fruit
+,Mango,vanilla,orange,mango,vanilla,orange,fruit,vanilla,fruit
+,Choco chips,Butter Scotch,Vanilla,choco chips,butterscotch,vanilla,chocolates,other,vanilla
+,Chocolate,vanilla,orange,chocolate,vanilla,orange,chocolate,vanilla,fruit
+,Butter scotch,vanilla,orange,butterscotch,vanilla,orange,other,vanilla,fruit
+,cream,vanilla,orange,cream,vanilla,orange,other,vanilla,fruit
+,Vanilla,chocolate,orange,vanilla,chocolate,orange,vanilla,chocolate,fruit
+,Vanilla,butter scotch,orange,vanilla,butterscotch,orange,vanilla,other,fruit
+,vanilla,choco,orange,vanilla,choco,orange,vanilla,chocolate,fruit
+,Mango,choco,orange,mango,choco,orange,fruit,chocolate,fruit
+,Mango,choco,orange,mango,choco,orange,fruit,chocolate,fruit
+,Mango,mint choco,orange,mango,mint choco,orange,fruit,chocolate,fruit
+,Vanilla,mango,orange,vanilla,mango,orange,vanilla,fruit,fruit
+,Mango,vanilla,orange,mango,vanilla,orange,fruit,vanilla,fruit
+,Vanilla,Mango,orange,vanilla,mango,orange,vanilla,fruit,fruit
+,Vanilla,Choco,orange,vanilla,choco,orange,vanilla,chocolate,fruit
+,Mango,Strawberry,orange,mango,strawberry,orange,fruit,fruit,fruit
+,Mango,vanilla,orange,mango,vanilla,orange,fruit,vanilla,fruit
+,Strawberry,vanilla,orange,strawberry,vanilla,orange,fruit,vanilla,fruit
+,Vanilla,mango,orange,vanilla,mango,orange,vanilla,fruit,fruit
+,Mango,vanilla,orange,mango,vanilla,orange,fruit,vanilla,fruit
+,Vanilla,mango,orange,vanilla,mango,orange,vanilla,fruit,fruit
+,Mango,Cream,orange,mango,cream,orange,fruit,other,fruit
