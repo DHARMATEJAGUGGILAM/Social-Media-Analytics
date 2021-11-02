@@ -252,6 +252,19 @@ Parameters: dataframe ; str
 Returns: float
 '''
 def getHashtagSentiment(data, hashtag):
+    x=[]
+    for index, row in data.iterrows():
+        if hashtag in row['text']:
+            if row['sentiment']=='positive':
+                x.append(1)
+            elif row['sentiment']=='negative':
+                x.append(-1)
+            elif row['sentiment']=='neutral':
+                x.append(0)
+            # print(row['text'])
+    return sum(x)/len(x)
+
+
     return
 
 
@@ -373,7 +386,8 @@ if __name__ == "__main__":
     # stateDf = makeDataFrame("data/statemappings.csv")
     # addColumns(df, stateDf)
     # addSentimentColumn(df)
-    #test.testGetDataCountByState(df)
+    #test.testGetDataCountByState(df)Get a Hashtag's Sentiment Score
     #test.testGetDataForRegion(df) 
     #test.testGetHashtagRates(df) 
-    test.testMostCommonHashtags(df)
+    #test.testMostCommonHashtags(df)
+    test.testGetHashtagSentiment(df)
