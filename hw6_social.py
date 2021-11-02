@@ -150,13 +150,15 @@ Returns: None
 '''
 def addSentimentColumn(data):
     classifier = SentimentIntensityAnalyzer()
+    # print(data)
     sentiments=[]
     for index, row in data.iterrows():
         message=data["text"].loc[index]
         text=findSentiment(classifier, message)
         sentiments.append(text)
-        # print(data["text"])
+        
     data["sentiment"]=sentiments
+    # print(data["sentiment"])
 
     return
 
@@ -168,7 +170,21 @@ Parameters: dataframe ; str ; str
 Returns: dict mapping strs to ints
 '''
 def getDataCountByState(data, colName, dataToCount):
-    return
+    x={}
+    for i, row in data.iterrows():
+        if ((len(colName)==0) and (len(dataToCount)==0) or (row[colName]==dataToCount)):
+                state=row["state"]
+                if state not in x:
+                    x[state] = 1
+                else :
+                    x[state] += 1
+    return x
+df = makeDataFrame("data/politicaldata.csv")
+stateDf = makeDataFrame("data/statemappings.csv")
+addColumns(df, stateDf)
+addSentimentColumn(df)
+
+    
 
 
 '''
@@ -325,4 +341,4 @@ if __name__ == "__main__":
     ## Uncomment these for Week 3 ##
     """print("\n" + "#"*15 + " WEEK 3 OUTPUT " + "#" * 15 + "\n")
     test.runWeek3()"""
-    test.testFindSentiment()
+    test.testGetDataCountByState(df)
