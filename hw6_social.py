@@ -184,6 +184,7 @@ stateDf = makeDataFrame("data/statemappings.csv")
 addColumns(df, stateDf)
 addSentimentColumn(df)
 
+
     
 
 
@@ -194,7 +195,18 @@ Parameters: dataframe ; str
 Returns: dict mapping strs to (dicts mapping strs to ints)
 '''
 def getDataForRegion(data, colName):
-    return
+    y={}
+    for i, row in data.iterrows():
+        region=row["region"]
+        if region not in y:
+            y[region] = {}
+        if  region  in y:
+            attack=row[colName]
+            if attack not in y[region]:
+                y[region][attack] = 1
+            else :
+                y[region][attack] += 1
+    return y
 
 
 '''
@@ -341,4 +353,9 @@ if __name__ == "__main__":
     ## Uncomment these for Week 3 ##
     """print("\n" + "#"*15 + " WEEK 3 OUTPUT " + "#" * 15 + "\n")
     test.runWeek3()"""
-    test.testGetDataCountByState(df)
+    # df = makeDataFrame("data/politicaldata.csv")
+    # stateDf = makeDataFrame("data/statemappings.csv")
+    # addColumns(df, stateDf)
+    # addSentimentColumn(df)
+    #test.testGetDataCountByState(df)
+    test.testGetDataForRegion(df)
