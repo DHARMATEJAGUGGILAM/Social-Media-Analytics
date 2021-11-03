@@ -16,6 +16,7 @@ nltk.download('vader_lexicon', quiet=True)
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 import matplotlib.pyplot as plt; plt.rcdefaults()
 import numpy as np
+from typing import Counter
 endChars = [ " ", "\n", "#", ".", ",", "?", "!", ":", ";", ")" ]
 
 '''
@@ -103,6 +104,7 @@ Parameters: dataframe ; dataframe
 Returns: None
 '''
 def addColumns(data, stateDf):
+    print(data['label'])
     names=[]
     positions= []
     states= []
@@ -121,6 +123,7 @@ def addColumns(data, stateDf):
     data['state']=states
     data['region']=regions
     data['hashtags']=hashtags
+    #print(positions)
     return None
 
 
@@ -151,6 +154,7 @@ Returns: None
 def addSentimentColumn(data):
     classifier = SentimentIntensityAnalyzer()
     # print(data)
+    #print(data["text"])
     sentiments=[]
     for index, row in data.iterrows():
         message=data["text"].loc[index]
@@ -158,7 +162,8 @@ def addSentimentColumn(data):
         sentiments.append(text)
         
     data["sentiment"]=sentiments
-    # print(data["sentiment"])
+    print(data["sentiment"])
+
 
     return
 
@@ -298,6 +303,13 @@ Parameters: dict mapping strs to ints ; dict mapping strs to ints ; int ; str
 Returns: None
 '''
 def graphTopNStates(stateCounts, stateFeatureCounts, n, title):
+    featurerate={}
+    topstates={}
+    for i in stateFeatureCounts:
+        featurerate[i]=(stateFeatureCounts[i]/stateCounts[i])
+    topstates=dict(Counter(featurerate).most_common(n))
+    graphStateCounts(topstates,title)
+
     return
 
 
@@ -395,9 +407,11 @@ if __name__ == "__main__":
     # df = makeDataFrame("data/politicaldata.csv")
     # stateDf = makeDataFrame("data/statemappings.csv")
     # addColumns(df, stateDf)
-    # addSentimentColumn(df)
+    #addSentimentColumn(df)
     #test.testGetDataCountByState(df)Get a Hashtag's Sentiment Score
     #test.testGetDataForRegion(df) 
     #test.testGetHashtagRates(df) 
     #test.testMostCommonHashtags(df)
     #test.testGetHashtagSentiment(df)
+    #test.testAddColumns()
+    
