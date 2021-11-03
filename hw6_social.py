@@ -265,7 +265,7 @@ def getHashtagSentiment(data, hashtag):
     return sum(x)/len(x)
 
 
-    return
+    
 
 
 ### PART 3 ###
@@ -278,6 +278,16 @@ Returns: None
 '''
 def graphStateCounts(stateCounts, title):
     import matplotlib.pyplot as plt
+    xlist=[i for i in stateCounts]
+    w=0.8
+    ylist=[stateCounts[i] for i in stateCounts]
+    for index in range(len(ylist)):
+        plt.bar(xlist[index],ylist[index],width=w)
+    plt.xticks(ticks=list(range(len(xlist))),label=xlist,rotation="vertical")
+    plt.title(title)
+    plt.xlabel("State")
+    plt.ylabel("Count")
+    plt.show()
     return
 
 
@@ -380,8 +390,8 @@ if __name__ == "__main__":
     test.runWeek2()"""
 
     ## Uncomment these for Week 3 ##
-    """print("\n" + "#"*15 + " WEEK 3 OUTPUT " + "#" * 15 + "\n")
-    test.runWeek3()"""
+    print("\n" + "#"*15 + " WEEK 3 OUTPUT " + "#" * 15 + "\n")
+    test.runWeek3()
     # df = makeDataFrame("data/politicaldata.csv")
     # stateDf = makeDataFrame("data/statemappings.csv")
     # addColumns(df, stateDf)
@@ -390,4 +400,4 @@ if __name__ == "__main__":
     #test.testGetDataForRegion(df) 
     #test.testGetHashtagRates(df) 
     #test.testMostCommonHashtags(df)
-    test.testGetHashtagSentiment(df)
+    #test.testGetHashtagSentiment(df)
