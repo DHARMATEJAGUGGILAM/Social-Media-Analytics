@@ -338,9 +338,6 @@ def graphRegionComparison(regionDicts, title):
                 temp.append(0)
         regions_features.append(temp)
     sideBySideBarPlots(features,regions,regions_features,title)
-
-
-
     return
 
 
@@ -351,6 +348,17 @@ Parameters: dataframe
 Returns: None
 '''
 def graphHashtagSentimentByFrequency(data):
+    dictionary1=getHashtagRates(data)
+    mostcommon=mostCommonHashtags(dictionary1,50)
+    hashtaglist=[]
+    frequencylist=[]
+    sentimentlist=[]
+    for i in mostcommon:
+        hashtaglist.append(i)
+        frequencylist.append(mostcommon[i])
+        sentimentlist.append(getHashtagSentiment(data,i))
+    scatterPlot(frequencylist,sentimentlist,hashtaglist,"Hashtags Frequency")
+
     return
 
 
