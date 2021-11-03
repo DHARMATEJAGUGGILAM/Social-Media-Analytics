@@ -162,7 +162,7 @@ def addSentimentColumn(data):
         sentiments.append(text)
         
     data["sentiment"]=sentiments
-    print(data["sentiment"])
+    #print(data["sentiment"])
 
 
     return
@@ -310,6 +310,7 @@ def graphTopNStates(stateCounts, stateFeatureCounts, n, title):
     topstates=dict(Counter(featurerate).most_common(n))
     graphStateCounts(topstates,title)
 
+
     return
 
 
@@ -320,6 +321,26 @@ Parameters: dict mapping strs to (dicts mapping strs to ints) ; str
 Returns: None
 '''
 def graphRegionComparison(regionDicts, title):
+    regions= []
+    features=[]
+    regions_features=[]
+    for region in regionDicts:
+        regions.append(region)
+        for feature in regionDicts[region]:
+            if feature not in features:
+                features.append(feature)
+    for region in regionDicts:
+        temp=[]
+        for each in features:
+            if each  in regionDicts[region]:
+                temp.append(regionDicts[region][each])
+            else:
+                temp.append(0)
+        regions_features.append(temp)
+    sideBySideBarPlots(features,regions,regions_features,title)
+
+
+
     return
 
 
